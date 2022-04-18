@@ -1,0 +1,14 @@
+service: my-first-serverless-script
+
+frameworkVersion: '3'
+
+provider: 
+  name: aws
+  runtime: nodejs14.x
+functions:
+  greeting:
+    handler: handler.greeting
+    events:
+      - http:
+          path: /
+          method: get
